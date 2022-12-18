@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK</title>
+</head>
+<body>
+    <!-- ----------------------------------------nav-bar------------------------------ -->
+
+    <header>     
+    <ul id="nav-bar">
+        <li id="nav-home" class="nav-list"> HOME </li>
+        <li id="nav-about" class="nav-list"> ABOUT </li>
+        <li id="nav-skills" class="nav-list"> SKILLS </li>
+        <li id="nav-projects" class="nav-list"> PROJECT </li>
+        <!-- <li class ="nav_list nav-btn-dark nav_list btn" id="nav_dark"> DARK</li> -->
+        <li id="nav-CFstats" class="nav-list"> CF STATS </li>
+    </ul> 
+    </header>
+
+    <div id="cards"> 
+        <!-- -------------------------------------Home-------------------------------- -->
+        <div id="home" class="cards_display"> 
+            <div id="home-page-info" class="mediumSize">
+                <H2 id="hello">Hello!  Myself Khushi Kumari </H2>
+                <p id="home-text" class="mediumSize">
+                    B.Tech Coumputer Science Undergrad at Birla Institute of Technology Mesra
+                </p> 
+            </div>
+
+            <div id="home-img">
+                <img id="home-page-img" src="homeKK.gif">
+            </div>
+        </div>
+
+        <!-- -------------------------------------About-------------------------------- -->
+        <div id="about" class="cards_display"> 
+            <!-- <p>CSE ki larki hu </p> -->
+            <div id="about-img">
+                <div class = "about_img"><img id="about-page-img" src="footer_images/github.jpg"></div>
+                <!-- <div class="about_my_img"><img id="about-page-my-img" src="footer_images/instaBlack.jpg"></div> -->
+            </div>
+            <div id="aboutMeContent">
+                <div class="largeSize"> More About Me...</div>
+                <p id="aboutText-part1" class="mediumSize">
+                    I am twenty years old . A 2nd year undergraduate student
+                    interested in the domains particulary inclined towards 
+                    competitive coding using C++ and web development.
+                </p>
+
+                <p id="aboutText-part2" class="mediumSize">
+                    I did my schooling from Dav Public School, Bistupur, Jamshedpur.
+                    Computer Science and Mathematics were some of my favourite subjects.
+                    My other interests include a strong enthusiasm towards learning 
+                    something new and which shall help improve my skillset.
+                </p>
+            </div>
+        </div>
+
+        <!-- ------------------------------------Skills---------------------------------- -->
+        <div id="skills" class="cards_display"> 
+            <!-- flex ni krunga -->
+            <div id="technologies-heading" class="text-lg">
+                <div>SKILLS</div>
+            </div>
+            <div id="back-btn3"><button class="button-55">Back to Top</button></div>
+            <div class="tech-card-container">
+                <div>
+                    <img class="skill-card transitionLeft" src="skills/skill1.png">
+                </div>
+                <div>
+                    <img class="skill-card transitionLeft"  src="skills/skill2css.png">
+                </div>
+                <div>
+                    <img class="skill-card transitionLeft" src="skills/skill3js.png">
+                </div>
+                <div>
+                    <img class="skill-card transitionRight" src="skills/skill4bootstrap.png">
+                </div>
+                <div>
+                    <img class="skill-card transitionRight" src="skills/skill5cpp.png">
+                </div>
+                <div>
+                    <img class="skill-card transitionRight" src="skills/skill6git.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- -------------------------------------Projects------------------------------- -->
+        <div id="projects" class="cards_display"> 
+            <div></div>
+            <!-- gsoc me select ho jaaye aisa project h  -->
+            <div id="technologies-heading" class="text-lg">
+                <div>PROJECTS</div>
+            </div>
+            <div id="back-btn4" ><button class="button-28">Back to Top</button></div>
+            
+            <div id="project-imgages">
+                <div >
+                    <img id="proj-img1" class="project-img" src="project1img.png">
+                    <div id="project-Info1">
+                        Project 1: Portfolio
+                    </div>
+                    <div>
+                        <button id="gitId2" class="btn"><a href="https://github.com/Khushi1918/wiki" target="_blank"> Github Link</a></button>
+                    </div>
+                </div>
+                <div>
+                    <img id="proj-img2" class="project-img" src="project2img.png">
+                    <div id="project-Info2">
+                        Project2: Wiki
+                    </div>
+                    <div>
+                        <button id="gitId1" class="btn"><a href="https://github.com/Khushi1918/LEADproject1" target="_blank"> Github Link</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------------------------------------CFstatss---------------------------- -->
+        
+        <div id="cf" class="cards_display">
+            <div id="cf-grid">
+                <div class="cf-box hoverDown">
+                    <div id="cfHoverHide">
+                        <div class="cf-details">Name :  <p id="codeforces-name"></p></div>
+                        <div class="cf-details">Handle :  <p id="codeforces-handle"></p></div>
+                        <div class="cf-details">Rating :  <p id="codeforces-rating"></p></div>
+                        <div class="cf-details">Rank :  <p id="codeforces-rank"></p></div>
+                    </div>
+                    <div class="overlay">
+                        <div class="textSkill">CF STATS</div>
+                    </div>
+                </div>
+                <form method="post" id="cfHandle">
+                    <input id="cfID" type="text" name="addTitle" placeholder="Search CF Handle">
+	 	            <input type="submit" id="CF-form-btn" placeholder="Search Handle">
+                </form>
+            </div>
+            <div id="cfIMG">
+                <h1 id="cfShake">CF STATS</h1>
+                <img id="cfLOGO" src="codeforces.png">
+            </div>
+        </div>
+
+        <!-- --------------------------------footer-info--------------------------------- -->
+        <div class="footer-container">
+            <div class="margin-top-bottom">
+                <p class="footer-text-segment1">Social Media Handles</p>
+                
+                <div class="footer">
+                    <a target="_blank" href="https://www.linkedin.com/in/khushi-kumari-7007491a0/">
+                        <img class="round-img-net" id="LinkedIn-img" src="footer_images/linked.png">
+                    </a>
+                    <a target="_blank" href="https://github.com/Khushi1918/">
+                        <img class="round-img-net" id="github-img" src="footer_images/github.jpg">
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/kumarikhushijsr14/">
+                        <img class="round-img-net" id="insta-img" src="footer_images/instaBlack.jpg" >
+                    </a>
+                </div>
+                <p class="footer-text-segment1">
+                    Created By Khushi Kumari using pure HTML-CSS, 
+                    Javascript and some Libraries
+                </p>
+                <p class="footer-text-segment1">
+                    <a target="_blank" class="text-xs" id="mymail"
+                        href="mailto:kumarikhushi019@gmail.com">kumarikhushi019@gmail.com</a>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>
