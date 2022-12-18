@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swapna's Portfolio Site</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  <script src="https://kit.fontawesome.com/f95c7bf39e.js" crossorigin="anonymous"></script>
+  <style media="screen">
+    body {
+      margin: 0;
+      text-align: center;
+
+
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+
+    h6 {
+      position: relative;
+      top: 25px;
+    }
+
+    hr {
+      margin: 0px;
+      background-color: black;
+      height: 3px;
+
+    }
+
+
+
+    .head {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-family: "Trirong", serif;
+      font-size: 400%;
+    }
+    .skillsh{
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-family: "Brush Script MT", serif;
+      font-size: 400%;
+        font-weight: 1000;
+    }
+
+    .nav {
+      margin-left: 630px;
+    }
+
+    .li {
+      padding-left: 50px;
+      padding-right: 5px;
+    }
+
+    .intro {
+      padding-top: 30px;
+      font-family: "impact";
+      font-weight: 2000;
+      font-size: 800%;
+
+    }
+    .container{
+      display: inline-block;
+    }
+
+    .intr {
+      padding-top: 5px;
+      font-family: "impact";
+      font-weight: 200;
+
+      font-style: italic;
+      color: #3E2C41;
+
+      font-size: 1.6rem;
+      width: 0;
+      overflow: hidden;
+ border-right: .15em solid orange;
+ white-space: nowrap;
+ margin: 0 auto;
+ letter-spacing: .15em;
+ animation:
+   typing 3.5s steps(40, end),
+   blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+     from { width: 0 }
+     to { width: 80% }
+   }
+   @keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+    .about {
+      width: 500px;
+
+      height: 775px;
+      border: solid;
+      border-width: thick;
+        padding: 5px 5px 5px 5px;
+          display: inline-block;
+
+    }
+
+    .myimg {
+      margin-top: 30px;
+      padding: 5px 5px 5px 5px;
+      height: 400px;
+      border: solid;
+      border-width: thick;
+
+    }
+    .abouti{font-family: "Arial Black";
+    font-size: 400%;
+
+    }
+    .abouto{
+      text-align: left;
+    }
+    .labo{
+      display: inline-block;
+      position: relative;
+      bottom: 368px;
+    }
+    .rabo{display: inline-block;
+      position: relative;
+      bottom: 368px;
+
+
+    }
+    .si {
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 75%);
+    cursor: pointer;
+   width: 23vw;
+
+   padding: 20px 20px 20px 20px;
+}
+.navy a:hover{  transform: scale(1.01);
+  filter: brightness(1.05);
+  -webkit-box-shadow: 0px 0px 52px 5px rgb(0 0 0 / 75%);
+  -moz-box-shadow: 0px 0px 52px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 52px 5px rgb(0 0 0 / 75%);
+
+}
+.si:hover {
+    transform: scale(1.01);
+    filter: brightness(1.05);
+    -webkit-box-shadow: 0px 0px 52px 5px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 0px 0px 52px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 52px 5px rgb(0 0 0 / 75%);
+}
+.skim{
+margin-left: auto;
+margin-right: auto;
+}
+.skillc{
+  display: flex;
+
+}
+.skilld{
+  display: flex;
+
+}
+.contactl{
+  flex-basis: 35%;
+}
+.contactr{
+  flex-basis: 60%;
+  margin-top: 40px;
+}
+.pror{
+  flex-basis: 30%;
+  padding: 10px;
+  border-style: solid;
+}
+.prol{
+  flex-basis: 60%;
+
+}
+.contactl p{
+display: flex;
+margin-top: 30px;
+}
+.contactl p i{
+  color: black;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.socialicon{
+  margin-top: 30px;
+display: flex;
+}
+.socialicon a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: black;
+  display: inline-block;
+
+  transition: transform 0.5s;
+}
+.socialicon a:hover{
+  color: grey;
+  transform: translateY(-5px);
+}
+
+.contact-right form{
+  width: 100%;
+
+
+}
+
+form input, form textarea{
+  width: 100%;
+  border:0;
+  outline: none;
+  background:#deb887 ;
+  padding: 15px;
+  margin: 15px 0;
+  color: black;
+  font-size: 18px;
+  border-radius: 6px;
+
+
+
+
+}
+
+.hoverwrap {
+  position: relative;
+  max-width: 500px;
+}
+
+
+.hoverwrap img { width: 100%; }
+
+
+.hovercap {
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+
+
+  position: absolute;
+  bottom: 0; left: 0;
+
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+
+.hovercap {
+  visibility: none; opacity: 0;
+  transition: opacity 0.3s;
+}
+.hoverwrap:hover .hovercap {
+  visibility: visible; opacity: 1;
+}
+hr.last {margin: auto;
+  margin-top: 100px;
+  border-top: 10px solid black;
+  width: 90%;
+
+}
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 16px;
+}
+
+
+
+
+  </style>
+
+
+</head>
+
+<body background="th.jpg" style="background-repeat:repeat-y;background-size: 100% ">
+  <h6 id="headi">Your goto client for fantastic web projects:dreams to reality.</h6><br>
+  <hr>
+  <div class="headlines">
+    <p class="head"><i class="fa-solid fa-globe"></i>THE SWAPNA TIMES<i class="fa-solid fa-globe"></i></p>
+    <hr>
+
+  </div>
+  <div class="navy">
+  <nav class="navbar navbar-expand-md navbar-light">
+    <a class="navbar-brand border border-dark" href="" href style="padding-top:0px; padding-bottom:0px;">NEWSPAPER OF <script>
+  var date=new Date();
+  var day=date.getDate();
+  var month=date.getMonth()+1;
+  var year=date.getFullYear();
+  document.write(+day+"/"+month+"/"+year);
+  </script> </a>
+
+    <div class="nav" style="padding-top:0px; padding-bottom:0px;">
+
+
+      <ul class="navbar-nav ms-auto" style="font-weight: bolder">
+
+        <li class="navbar-item border border-dark">
+          <a class="nav-link" href="#about" href style="padding-left:40px;padding-right:40px;">ABOUT</a>
+
+        </li>
+        <li class="navbar-item border border-dark ">
+          <a class="nav-link" href="#skill" href style="padding-left:40px;padding-right:40px;">SKILLS</a>
+
+        </li>
+        <li class="navbar-item border border-dark">
+          <a class="nav-link" href="#project" href style="padding-left:40px;padding-right:40px;">PROJECTS</a>
+
+        </li>
+        <li class="navbar-item border border-dark">
+          <a class="nav-link" href="#contact" href style="padding-left:40px;padding-right:40px;">CONTACT</a>
+
+        </li>
+
+
+
+
+      </ul>
+    </div>
+
+
+
+
+  </nav>
+</div>
+  <hr>
+  <div class="home">
+    <p class="intro">HEY VISITOR,<br>I'm SWAPNA NEEL.</p>
+    <div class="container">
+    <p class="intr">A FREELANCE WEB DEVELOPER
+    </p>
+  </div>
+      <hr style="background-color: grey;margin-top:100px; ">
+  </div>
+
+
+
+    <div id="about">
+  <div class="aboutf" style=" height: 775px;">
+  <img src="labo.jpg" class="labo" style="
+      height: 775px;
+      width: 500px;
+  ">
+
+  <div class="about">
+    <div class="hoverwrap">
+      <img src="photo.jpg" class="myimg">
+      <div class="hovercap">My performance at GP BIRLA AUDITORIUM,BIT MESRA</div>
+
+    </div>
+    <p class="abouti">ABOUT ME!</p>
+    <h6 class="abouto" style="top:0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h6>
+
+  </div>
+
+  <img src="rabo.jpg" class="rabo" style="
+    width: 500px;
+    height: 775px;
+">
+</div>
+</div>
+<br>
+<div id="skill">
+  <div class="skill">
+    <div class="skillsh"> WANTED SKILLS<i class="fa-sharp fa-solid fa-star" style="margin-left: 10px;"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i></div>
+
+    <div class="skim" style="
+    margin-left: 180px;
+    margin-right: 250px;
+
+">
+    <div class="skillc">
+    <div class="skilli">  <img src="html.jpg" class="si" style="
+    margin-right: 50px;
+">  </div>
+    <div class="skilli">  <img src="css.jpg" class="si" style=""></div>
+    <div class="skilli"> <img src="js.jpg" class="si" style="
+    margin-left: 50px;
+"></div>
+  </div>
+
+  <div class="skilld">
+    <div class="skilli">  <img src="bootstrap.jpg" class="si" style="
+    margin-right: 50px;
+    margin-top: 20px;
+"></div>
+    <div class="skilli"> <img src="cplusplus.jpg" class="si" style="
+    margin-top: 20px;
+"></div>
+    <div class="skilli">  <img src="r.jpg" class="si" style="
+    margin-left: 50px;
+    margin-top: 20px;
+"></div>
+  </div>
+  </div>
+
+</div>
+<br>
+  <button class="top-btn btn btn-xs text-sm" fdprocessedid="15g2ym" ><a href="#headi">
+    Back To Top</a></button>
+  </div>
+
+
+
+
+<hr>
+<div id="project" style="padding-top: 100px;padding-bottom: 190px;background-image: url(oldn.jpg);">
+  <div class="pro">
+    <div class="row">
+      <div class="prol" style="background: #BF9742;opacity:0.8; ">
+<h1> Editorial: My Projects</h1>
+<h2 style="font-weight:bolder;
+   ">Unfortunately, the editor has no projects at the moment!</h2>
+   <p style="margin-left: 30px;">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa vehicula eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa vehicula eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa.”</p>
+
+   <button type="submit" style="
+    margin-top: 50px;
+">SOURCE CODE FOR THIS PROJECT <a href="" style="color: black; padding-top: 100px;"><i class="fa-brands fa-github"></i></a></button></a></button>
+
+      </div>
+      <div class="pror">
+        <img src="project.jpg" style="height: 400px;
+        width: 400px;
+        margin-right: auto;">
+      </div>
+    </div>
+    </div>
+    </div>
+    <br>
+<hr>
+
+
+
+
+
+<div id="contact" >
+  <div class="container">
+    <div class="row">
+      <div class="contactl">
+        <h1 class="sub-title" style="font-size:200%;
+        display: flex;
+        border-style: solid;" ><i class="fa-solid fa-paper-plane" style="  color: black;
+          margin-right: 10px;
+          font-size: 25px;
+          margin-top:5px;
+          "></i>LETTERS TO EDITOR!</h1>
+        <p><i class="fa-solid fa-envelope"></i>swapnaworks2002@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>8240570267</p>
+        <div class="socialicon">
+          <a href="https://m.facebook.com/100016904343647/"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/p/Clg2PcTPG1-/?igshid=MTI5NDc2ZGU="><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/swapna-neel-paul-65591422a"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/SwapnaBlackCat720"><i class="fa-brands fa-github"></i></a>
+
+        </div>
+      </div>
+      <div class="contactr">
+      <form >
+
+        <input type="text" name="Name" placeholder="Your Name....." required >
+        <input type="email" name="Email" placeholder="Your Email....." required>
+        <textarea name="Message" rows="6" placeholder="Your Message....."></textarea>
+        <button type="submit" class="button" input type="submit" name="">SUBMIT</button>
+
+      </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+<hr class="last">
+
+</body>
+
+</html>
