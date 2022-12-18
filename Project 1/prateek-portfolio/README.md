@@ -1,0 +1,8 @@
+NAME: PRATEEK KRISHNA
+IEEE-LEAD-TEAM-3
+
+TECH STACK: REACTJS, CSS
+
+CHECK IT OUT:
+
+https://heyprateek.netlify.app/

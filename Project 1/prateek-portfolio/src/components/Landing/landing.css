@@ -1,0 +1,40 @@
+.hero{
+    background-color: #FF7D7D;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+}
+
+.blue{
+    color: #816797;
+    /* font-size: 80px; */
+}
+
+.dialogue{
+    padding-top: 15vh;
+    color: #2A0944;
+    justify-content: space-around;
+    font-weight: 900;
+}
+
+/* @media screen and (max-width:769px){
+    .blue{
+        font-size: 10vw;
+    }
+} */
+
+/*Dark mode here*/
+.hero-dark{
+    background-color: #413F42;
+}
+.blue-dark{
+    color: #EEEEEE;
+}
+.dialogue-dark{
+    padding-top: 15vh;
+    color: #FDFDBD;
+    justify-content: space-around;
+    font-weight: 900;
+}

@@ -1,0 +1,7 @@
+NAME: PRATEEK KRISHNA
+IEEE-LEAD-TEAM-3
+
+TECH STACK: NEXTJS, CSS
+
+CHECK IT OUT:
+http://onlymovies.vercel.app/
