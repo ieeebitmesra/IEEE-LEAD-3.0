@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Aryan Mishra</title>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing Script">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta Stencil">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+     *{
+          box-sizing: border-box;
+          margin-left: 0vw;
+          margin-right: 0vw;
+     }
+     html{
+          scroll-behavior: smooth;
+     }
+     body{
+          /* height: 3000px; */ 
+          /* height: 2000px; */
+          
+          background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHwAugMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQIH/8QAHRABAQEAAgIDAAAAAAAAAAAAAAERIZGBoTFRYf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDjAACoAoigEAFi79ppaC6rGtaBpT9TQUtTT5BdEAaRNNBVtSJsBKvJwd9AyIAogCqgCiKAqAAALqAAULQIEABAGipKUCLtQBkEoKIoKIAqsqCiAAAKIAogBEoAAAKgCiAIAAACiAKACiAKIAuiAKIAAgKIoCKgCocgBUBRFAAAABUAFQAUAACggACoAAAAeQEAAABUAUQBRAFEAaEAAAEABUAUAA8+hABAFAABAURQAAFEBQQFEAAARUAUABAAABQKCAAoAAAAAAAAAAAIKgAAAAP/2Q==');
+     }
+     /* *{
+          box-sizing: border-box;
+     } */
+     .nav{
+          /* border: solid red; */
+          /* position: sticky; */
+          top: 1px;
+          height: 7vw;
+          background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHgAoAMBIgACEQEDEQH/xAAbAAADAQEBAQEAAAAAAAAAAAABAgMABAUGB//EACwQAAICAQMDAwQBBQEAAAAAAAABAhEDEiExBEFREyKBFDJhkXEjUlOhsRX/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwD8aaBQ7QtbgBoFDNAKMNQAlwahooUeJUUiiyojEomVjcUjSL45LwjmTsopUis67YTS7IqpR8I89ZaD61lZd/qRXZDPKtPCPP8AU/IXl2KkUzTT7I48ktx5TsjIzut5hZSsk2gyZNsjpmDVjONICdGnJswpKsAQUFZBMhqKjJDLYaON80LJpbFSmTDqI6w2CLKVB1tkExkypFdQymSSbQLoJFtbM5kdQNQpFXL8iuRJyM2FjSYlhYrI0qt2PKOwqHhu6ZBF7MBWcKJOSQDUW6aMZ5VGT2ObUaMmna5GG4+slh6LB0d3HVR8x1Li8snHgWWacl7pN/JNuy1MwUN2EGfBFANimKKxyUhXKxDAPZgIwBYDM3YAMULFIOv05RjbWxByaezOifUasemjke5NMNrYnO5ho8EUoWZgZRjBNQGQz4AjPgoBjR3kr4OnLCHpquQOawitUFBBsNgMAdQU13EBYU0hTJmIi7ROSOpwVIk47iFQoKKSiLpYUrAFpoIASBIdJAkAthQrHirINEfUDTpNp7lE5bmRVQXcDjQCpWHSBXY+5UTaBRRJPk1b0IEUQyjRb09rJ5GIPRUYuNE8mNLihfcDTKXBWU6WqgSpbFPQyWZdLkYVzS3NGNnZ9DN+P2ikOha5aBXLGEe4s8cWd/0sVyzLo4vu/wBiJXmemVxwUXuelDoMflsp/wCfHtG/kQrzJRi0Joj3Z6sugh/bXyTl0WPsnsCvOlGIjj+T0X0mO9zPooeaEK85Kh40ztfQX9rv5JPopx4/6CoaVq2KwxJ7sWWGaZoqaKmraY0QyYkxm5X4NHfbuDHRLTez/kpjpPhHCpyiw+tLyRY9O34QVkp1Ua8nl/UyWzdorDqIgj0FJfhoyyW6VI4vqYvhnTilj2kpW/BUdMccuexfFgjLmkPiywlFJ8lMcYydptLyiAQ6Zv7EmOul6j/Ft/o7caSi3KVL+Toxwjki1Bzl8qiLHkT6bKq9kUq3aRLJh08V+j2cuFKPvzNqrpnFlhByTcrS8Nso8qcWnulRNU3wn/B6eaGNReqa/N7HDlhi1e2VrzYQqir4pgnDbavgGRpR2zKq4Of19L+4qKPFKvsTJvE1zGjPqXv7ibz293sAs8VvwTcNDtFJdQn5JuabCobsWS5CYjRNDfYMVsEwhuilXJbDLfYJisuuMpJJvj8hjmkpbW9+DGCKS6rLJ+6NLtLvRfH1Wfdwckq/ZjBR6nL1sXBTmmmk6VcGlkcIf05tb2zGBrhzZZuUvUlqvgg8r32AYqJym2rsjKbCYi4CbY6VmMF1hWzGBj//2Q==');
+     }
+     .nav ul{
+          float: right;
+          /* background-color: blue; */
+          display: flex;
+     }
+     .nav li{
+          /* background-color: brown; */
+          font-size: 1.5vw;
+          padding: 1vw 4vw;
+          padding-top: 0.2vw;
+          display: flex;
+          list-style: none;
+     }
+     .ima{
+          border-radius: 65px;
+          width: 8%;
+          height: 100%;
+          margin-top: 1%;
+     }
+     .first{
+          /* background-color: green; */
+          text-align: center;
+          width: 100%;
+          color: beige;
+          background-image: url(https://wallpapers.com/images/file/3d-black-windows-laptop-01zaolp9si4rus6t.jpg);
+          /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGgi4d-ki5iMB2c9PI-BIjZ3MozVfLRWeYNg&usqp=CAU); */
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          /* background-image: url(https://lh3.googleusercontent.com/YiHxHCxngm1kn_yoHW45Utlrgy86ijRJDdnKS2zRgURzi-YgVKOEtNf6AHMNnFGYrmxrmLVxIwdR-gkU4euzV7B3h4vL6V3rLR6e0Fj8uND_MLJes6oT-EzuG5qyVD855qELsnPdJ2Iq0SbA6A); */
+          /* background-image: url(https://lh3.googleusercontent.com/YiHxHCxngm1kn_yoHW45Utlrgy86ijRJDdnKS2zRgURzi-YgVKOEtNf6AHMNnFGYrmxrmLVxIwdR-gkU4euzV7B3h4vL6V3rLR6e0Fj8uND_MLJes6oT-EzuG5qyVD855qELsnPdJ2Iq0SbA6A);*/
+          height: 44vw;
+     }
+     .name{
+          /* border: solid rosybrown;  */
+          /* border: solid rosybrown; */
+          /* border: solid rosybrown; */
+          /* border: solid rosybrown; */
+          font-size: 8vw;
+          float: left;
+          font-family: fantasy;
+          width: 98%;
+          margin-left: 2%;
+          color: rgb(9, 214, 228);
+     }
+     .name:hover{
+          color: rgb(185, 6, 6);
+     }
+     .intro{
+          /* border: solid blueviolet; */
+
+          margin-top: 11vw;
+          width: 100%;
+          float: right;
+          height: 9vw;
+          
+          
+          /* animation-name: tecv;
+          animation-iteration-count: infinite;
+          animation-duration: 2s; */
+     }
+     /* .bg{
+          border: solid 5px red;
+          background-image: url('https://lh3.googleusercontent.com/YiHxHCxngm1kn_yoHW45Utlrgy86ijRJDdnKS2zRgURzi-YgVKOEtNf6AHMNnFGYrmxrmLVxIwdR-gkU4euzV7B3h4vL6V3rLR6e0Fj8uND_MLJes6oT-EzuG5qyVD855qELsnPdJ2Iq0SbA6A');
+          height: 100%;
+          opacity: 20%;
+     }   */
+     .ima1{
+          margin-top: 61px;
+          height: 335px;
+          opacity: 40%;
+     }
+     .ima1:hover{
+          opacity: 100%;
+     }
+     .spn{
+          color: yellow;
+          font-size: 7vw;
+          /* margin-right: 500px; */
+          text-align: center;
+     }
+     .spn::after{
+          content: "";
+          animation-name: tecv;
+          animation-duration: 6s;
+          animation-iteration-count: infinite;
+     }
+     @keyframes tecv {
+          0%{
+               content: "Developer";
+          }
+          20%{
+               content: "Developer";
+          }
+          25%{
+               content: "Competitive Programmer";
+          }
+          45%{
+               content: "Competitive Programmer";
+          }
+          50%{
+               content: "Content Writer";
+          }
+          70%{
+               content: "Content Writer";
+          }
+          75%{
+               content: "Learner";
+          }
+          100%{
+               content: "Learner";
+          }
+     }
+     .second{
+          /* border: solid red;
+          color: aliceblue;
+          position: sticky;
+          /* top: 500px;                 Go to Top */
+          /* border: solid blue; */
+          color:gold;
+          background-image: url('https://media.istockphoto.com/photos/golden-particles-in-the-rays-of-light-on-a-black-background-for-use-picture-id1336137419?b=1&k=20&m=1336137419&s=170667a&w=0&h=NmWvnP-uGjydnVLzp-VhwgrJVOjvD8wEb9K1RDgHCFc=');
+          margin-top: 12px;
+          width: 100%;
+          background-size: 900px;
+          height: 46vw;
+          /* margin-top: 88px; */
+     }
+     
+     .myself{
+          
+          width: 66%;
+          height: 61%;
+          float: right;
+          margin-top: 9%;
+          margin-right: 0px;
+          font-size: 3vw;
+     }
+     .ima2{
+          width: 23%;
+          margin-left: 5%;
+          border-radius: 6vw;
+          border: solid;
+          margin-top: 8.5%;
+     }
+     .qwq{
+          padding-top: 6%;
+          margin-top: 0%;
+          margin-bottom: 0px;
+          margin-left: 15%;
+          height: 17%;
+          width: 85%;
+          font-size: 5vw;
+     }
+     .third{
+          /* border: solid red; */
+          color: white;
+          /* background-color: aqua; */
+          /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr9A8pEW4xgsNT2YbtzGtHd1pM2D43HADpTQ&usqp=CAU'); */
+          background-color: black;
+          background-repeat: no-repeat;
+          background-size:cover;
+          height: 58vw;
+          /* margin-top: 88px; */
+          width: 100%;
+     }
+     .thd-hd{
+          margin-left: 40%;
+          margin-top: 10px;
+          font-size: 8vw;
+          color: #fff;
+          animation: glow 1s ease-in-out infinite alternate;
+     }
+     @-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+    
+     .cpp{
+          /* border: 2px solid rebeccapurple; */
+          margin-top: 1%;
+          margin-left: 8%;
+          width: 12%;
+          height: 31%;
+          transition: width 2s,height 2s, transform 2s;
+     }
+     .cpp:hover{
+          /* width: 144px;
+          height: 144px; */
+          transform: rotate(360deg);
+     }
+     .c{
+          /* border: solid 2px red; */
+          margin-left: 12%;
+          width: 12%;
+          height: 31%;
+          transition: width 2s,height 2s, transform 2s;
+     }
+     .c:hover{
+          /* width: 132px;
+          height: 144px; */
+          transform: rotate(360deg);
+     }
+     .java{
+          /* border: solid 2px red; */
+          height: 31%;
+          margin-left: 12%;
+          width: 12%;
+          transition: width 2s,height 2s, transform 2s;
+     }
+     .java:hover{
+          /* width: 93.292px;
+          height: 154px; */
+          transform: rotate(360deg);
+     }
+     .hht{
+          /* border: solid 2px red; */
+          height: 32%;
+          width: 14%;
+          margin-left: 7%;
+          margin-top: 5%;
+          transition: width 2s,height 2s, transform 2s;
+     }
+     .hht:hover{
+          /* width: 232px;
+          height: 226px; */
+          transform: rotate(360deg);
+     }
+     .css{
+          /* border: solid 2px red; */
+          height: 32%;
+          margin-left: 8%;
+          width: 18%;
+          transition: width 2s,height 2s, transform 2s;
+     }
+     .css:hover{
+          /* width: 175px;
+          height: 273px; */
+          transform: rotate(360deg);
+     }
+     .js{
+          /* border: solid 2px red; */
+          height: 31%;
+          width: 12%;
+          margin-left: 13%;
+          transition: width 2s,height 2s, transform 2s;
+
+     }
+     .js:hover{
+          /* width: 136.292px;
+          height: 154px; */
+          transform: rotate(360deg);
+     }
+     .cmm{
+          /* border: solid 2px red; */
+          width: 15%;
+          margin-left: 8%;
+          height: 32%;
+          transition: width 2s,height 2s, transform 2s;
+
+     }
+     .cmm:hover{
+          /* width: 314px;
+          height: 216px; */
+          transform: rotate(360deg);
+     }
+     
+.html{
+     width: 20px;
+    margin-left: 800px;
+    float: right;
+    position: absolute;
+}
+.cfv{
+     /* background-color: #fff; */
+     /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLI7WULAuOPx_0r865t97kAnUi3TQC10Z4nQ&usqp=CAU'); */
+     background-repeat: no-repeat;
+     /* background-color: #fff; */
+     background-size:cover;
+     /* height: 1000px; */
+     /* margin-top: 27px; */
+     /* background-color: #abcea6; */
+     height: 60vw;
+     background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAH8A/gMBIgACEQEDEQH/xAAaAAACAwEBAAAAAAAAAAAAAAACAwEEBQAG/8QAKhAAAgEDBAIBAwUBAQAAAAAAAAECAxESBBNBUTFhISJCUgUUMnGBkWL/xAAaAQADAQEBAQAAAAAAAAAAAAAAAQIDBAYF/8QAHhEBAQADAQEBAQEBAAAAAAAAAAECERIDEyFBcQT/2gAMAwEAAhEDEQA/AMtRuHGmcGmeu28ZpypXOdAOMg73Fuq0ruh0DtSXJbIcQ6HKo6b5+SMPRacfQLj6H0XKvj6IxH4Po7ab4DZaIsTiPVFjI0A6PVVlTJ2i4qISpeie1cKWyQ6Vi/tgSp34H2OFFwOwLMqLZGwx9p5JjBB7SGqjIPba4FtUxV3RXBGz6LONgoxuLo+VZU7BxiWVSvyGtPfkXRzFVsSolxaaJOxFeCeorlUwuTtlraSXgHGwdC4qzoiKlF9GhYjBMcyK4bZMqbT8EY+jUlp0xb05faOKqWJSDxOxAkKIxRZ0EPhG5NqsYUosLFlqFK68DFRXRNyac1TUPRKplvZCVEns+FVUfQSo+i2qYSgK5VUwVFS9Bql6LKgEok9U+FVUSdr0WlFck/QhdU9RTdIHBclueNvgr1SpU5QGEfROMV5EylYDc9laRuLOMeEdiuhMZjIzCyw/x2zcnYGxkg8hbVJCFTsHGI25xNp6DY6wZwtmW4kYIY0SovoexojbO27D8GTgGxySohYroOx1hbHLHxOxGYnYnQw0GPwOhKK8i8TsRHPxbjOIaqLgpWJV1yTcVdVdVQJTKcZMZFsm4n0s7h24xSfsK67Fo+h7jBdYFtdi5NByLkN1xUtQBN3FtFzFFprr3Fyqtg4k4j1BsDkR8jMDsSk6BdhRkyVEJU2IxQkxqbAhTfQxRa4Iqv1KlYNT9i7egowTJMSqR7DjKLfg6NJPgdCmlwTbFzaYJf0MUSIx+R0I3M7Wkmy8TsCyqVzpUPgnpfCpKKS+WIlUhHlDq+nqWdkzOrUailyaY6rLLcKwOwHYk4m/TAjA7AfiTGAdDRCgzttlqMF0NjSXRPSpio4NcHfUuDRVJdHOiuhXM+Gd9ViPkvvTx4Aen+RzOFxVOzOsy06ALosfULlWxOxLLpkOA+i0r4nYj8DsQ6GibM7FsbiHGncXR6IjEfTj6GRo3LFLTNkXOLmBdNLoeqal9pYp6Z8FiGkl0Y3ONp51nugr/wATlQXRrx0rXlDY6dLykRfVpPFjxoSa8Bx0s3wbKpQ4Q2FJdIi+qp4seGjnymPjpGkauHwLnAi+u2ny0pKjYnBD3ADBj2OSnRUkIqaSMmXY03cdGn8B1ouJXj8DsB2J2J3OHknElRG4k4gOS0NiyMSbE05BxYdwIxYaRCpEkONwrBxjcNnpXcfkhw9FyNLtB7S6F0fDOlTfQG36NPZvwR+39D7HDM2W+BkdLN+EadPTq/yi5Rox6JvsqeO2JDQTf2lul+my5Rt0qUS1CELeDHL3rbH/AJ4xaf6fj8tIdHSI1nCL4OVKJlfW1rPKKdLSpFmGmLVOmhqikZZZ1tj5xTen9AvT+i/ZM7FMntVwZ609uA1SsXXBJASXofQ40q7YE4ItP4FSSHtNiq6ZGA+aAsVKjRaiHFHf4T/gUSPJYHYj8DsT6G3z9EYnYD8Qo0w2OVfC/hMZDTzl4Reo0V0XqNNJeDPL00vHy2zqWhm/I+Oh9GlGIcYGN9a3x8ozf2MemStHbwmaigGoIn6VfyjI/ayXhEft5/ibKpx5C24i+tP5RjR0839rLENO+UaSpx4CUF0K+lVPKKUNMuhq0y6LsYR5GRjAyudaTCM/Ya4IxkuGamMAZRgLs+Izll0NhfosS2+AHUgh72NSCi7HXEuuiN64uaOjmzlUS8ld1Bc5j5LpbeojyC9RDsoSYtj4ib6Wr0tRAHeiykkSVzInurmcX5J+kqpsJSYaPpY+kj6RDmwHN9hobY0YXHR0zl4Vy5DSx4LlChb7bnRl6ac+PltlrSO/zEdDQJ8G3GlC3iwWFNGF9q2x8GZT0CXlhuioeFc0rRJ2oSRH0rT5z+MrKztiMi7l16ZPwKlppLwxzKUubC3dcAubXAxQqr4VgZU58yQxfxCqBKfsS6f/AKudtPgNJ2fmuzs0uRMaFRrwydiYvw903d6ZO8+xSoSGwotC/D3U71Rr4BcqsuGWKcWvtHw9xRNykXMbWXPe/FiZ7v4s3rJr+KIdOL4QT1gvlXnm6n4sJSnzFm49PDpAuhBfaV9Yj5VkxUmvlM5xfRqbSXALp+kHcPis3bOwNOOmy9DY6WC4FfSHPJkKm+gtmXRr7UF4R22ukL6n8mTsTJVCRpuPpEW/ofex82etLJkvR+y67Ati7o4jKTaLFGcr8C8UT4Nb+spNNKnOFvmwTVOXymjLc2g6VRLymzP5tJnF1qPBCk0BGvS9nOrSfDF/p7N3v6X+gyq/0Iltt8gWg+ZDmI6MlJ/mhMop/wApN/0yduHbIwivFy9RF3QqlTTvZ/8AR1PFcCJPHwwVXkvDQ9bT1JWlTqR5GZw5ZnQrSl5sHmZ3BpM151KXID1FKP2opuaFynDlMJgV9Gh+6p8JBR1EX4sZe5T6YarU1ww+Y+jWjVTGRafKMqGpguxsdZBcMi+a56Rp4ojC5Rj+oQXDGL9Sj+JHOTSZ4rW2dtx6Ky/UYv7Sf3ilwHOR94rDsjslyI3lLg69w5v9HRrlFg/AtgudhyFsxgSXQt17C5apLgqSpuUFK4DlL8QJapdC3XT4LmNZ3KP/2Q==');
+    width: 100%;
+     font-family:anton;
+     /* background-color: green; */
+}
+.HD{
+     font-size: 7vw;
+     color: #5b1e1e;
+    text-align: center;
+    margin-bottom: 2vw;
+    margin-top: 40px;
+    width: 100%;
+    height: 16%;
+}
+.allabt{
+     /* background-color: wheat; */
+     height: 895px;
+     font-family: Allerta Stencil;
+     font-size: 50px;
+     text-align: center;
+     color: rgb(233, 6, 86);
+     /* font-weight: 100; */
+}
+.contact{
+     background-color: rgba(165, 10, 10, 0.95);
+    /* margin-top: 20px; */
+    height: 9%;
+    color: white;
+    margin-top: 33px;
+    width: 100%;
+    margin-top: 0%;
+
+}
+.cnt{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-size: 3vw;
+     /* margin-left: 480px; */
+     text-align: center;
+     height: 29%;
+    width: 100%;
+}
+.fb{
+     margin-left: 13%;
+    height: 41%;
+    width: 6%;
+    transition: ease-in-out 2s;
+}
+/* .fb:hover{
+     height: 90px;
+     width: 90px;
+} */
+.insta{
+     margin-left: 18%;
+    width: 6%;
+    height: 41%;
+}
+.ld{
+     width: 6%;
+    height: 41%;
+    margin-left: 18%;
+}
+.githb{
+     width: 6%;
+    height: 41%;
+    margin-left: 20%;
+}
+#bttn{
+     /* background-color: red; */
+     background-color: #cf2d7a;
+    border-radius: 2vw;
+    width: 6vw;
+    font-size: 0.7vw;
+    height: 2vw;
+}
+.bmi{
+     /* position: absolute;
+    align-items: center;
+    width: 28%;
+    background-color: rgb(34, 207, 91);
+    height: 91%;
+    border-radius: 20px;
+    transition: transform 0.2s;
+    margin-left: 11%;
+
+
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    margin-top: 167.5%; */
+
+    width: 28%;
+    float: left;
+    background-color: #5b1e1e;
+    height: 44vw;
+    border-radius: 2vw;
+    transition: transform 0.2s;
+    left: 30px;
+    top: 38px;
+    margin-top: 0px;
+    margin-left: 11%;
+}
+.bmiphoto{
+     margin-top: 24%;
+    width: 64%;
+    margin-left: 19%;
+}
+.bmihead{
+     margin-left: 24%;
+    font-size: 2.6vw;
+    margin-bottom: 0vw;
+    color: bisque;
+}
+.bmiPara{
+     margin-left: 10%;
+    font-size: 1.3vw;
+    margin-bottom: 1vw;
+    color: bisque;
+}
+.bmi:hover{
+     transform : scale(1.11);
+}
+.portf{
+     background-color: #5b1e1e;
+    float: right;
+    width: 28%;
+    height: 44vw;
+    border-radius: 2vw;
+    transition: transform 0.2s;
+    margin-right: 11%;
+}
+.portfphoto{
+     float: right;
+    /* margin-right: 100px; */
+    margin-top: 25%;
+    width: 95%;
+    margin-right: 2.5%;
+}
+.portHead{
+     padding-top: 88%;
+    margin-left: 35%;
+    font-size: 2.6vw;
+    margin-bottom: 0vw;
+    color: bisque;
+}
+.portPara{
+     margin-left: 29%;
+    font-size: 1.3vw;
+    margin-bottom: 1vw;
+    color: bisque;
+}
+.portf:hover{
+     transform:scale(1.11);
+}
+.bttnBmi{
+     margin-left: 24.5%;
+    border: solid 0.4vw red;
+    background: rgb(255, 255, 255);
+    border-radius: 1vw;
+    font-size: 1.4vw;
+    height: 2.5vw;
+    font-style: italic;
+    width: 50%;
+}
+
+.bttnPort{
+     /* margin-left: 133px; */
+     margin-left: 27%;
+    border: solid 0.4vw rgb(150, 161, 3);
+    background: white;
+    border-radius: 1vw;
+    font-size: 1.4vw;
+    height: 2.5vw;
+    width: 50%;
+    font-style: italic;
+}
+.bttn:hover{
+     cursor:grab;
+}
+.bttnPort:hover{
+     background-color: rgb(150, 161, 3);
+}
+.bttnBmi:hover{
+     background-color: rgb(235, 5, 66);
+}
+
+.hom{
+     text-decoration:none;
+}
+.hom:visited, .hom:link{
+     color: #19ebeb;
+}
+.hom:hover{
+     color: orangered;
+}
+
+.about{
+     text-decoration: none;
+}
+.about:visited, .about:link{
+    color: #19ebeb;
+}
+.about:hover{
+     color: orangered;
+}
+
+.skill{
+     text-decoration: none;
+}
+.skill:visited,.skill:link{
+     color: #19ebeb;
+}
+.skill:hover{
+     color: orangered;
+}
+
+.proj{
+     text-decoration: none;
+}
+.proj:visited,.proj:link{
+     color: #19ebeb;
+}
+.proj:hover{
+     color: orangered;
+}
+
+.contct{
+     text-decoration: none;
+}
+.contct:visited,.contct:link{
+     color: #19ebeb;
+}
+.contct:hover{
+     color: orangered;
+}
+.portSource{
+     text-decoration: none;
+}
+.bmiSource{
+     text-decoration: none;
+}
+.FB{
+     text-decoration: none;
+}
+.INSTA{
+     text-decoration: none;
+}
+.LB{
+     text-decoration: none;
+}
+.GITHB{
+     text-decoration: none;
+}
+.ex{
+     width: 16%;
+    height: 17vw;
+    margin-left: 9%;
+    transition: width 2s,height 2s, transform 2s;
+}
+.ex:hover{
+     transform: rotate(360deg);
+}
+/* .pic{
+     float: right;
+     border-right-width: 0px;
+     width: 200px;
+     height: 200px;
+     margin-right: 219px;
+    margin-top: 113px;
+    transition: width 2s,height 2s, transform 2s;
+}
+.pic:hover{
+     width: 200px;
+     height: 200px;
+     transform: rotate(360deg);
+} */
+</style>
+<body>
+     <div class="nav">
+          <nav>
+               <img class="ima" src="https://userpic.codeforces.org/2371637/title/f932d9f6a47de3d0.jpg" alt="">
+               <ul>
+                    <li>
+                         <a class="hom" href="#">Home</a>
+                    </li>
+                    <li>
+                         <a class="about" href="#sec">About Me</a>
+                    </li>
+                    <li>
+                         <a class="skill" href="#thd">Skills</a>
+                    </li>
+                    <li>
+                         <a class="proj" href="#CFV">Projects</a>
+                    </li>
+                    <li>
+                         <!-- <a href="#cc">Contact</a> -->
+                         <a class="contct" href="#cc">Contact Me</a>
+                    </li>
+               </ul>
+          </nav>
+     </div>
+     <div class="first">
+          <div class="name">
+               Hi. I'am Aryan Mishra
+          </div>
+          <div class="intro">
+               <span class="spn">
+
+               </span>
+          </div>
+          <div class="bg">
+
+          </div>
+          <!-- <img class="ima1" src="https://lh3.googleusercontent.com/YiHxHCxngm1kn_yoHW45Utlrgy86ijRJDdnKS2zRgURzi-YgVKOEtNf6AHMNnFGYrmxrmLVxIwdR-gkU4euzV7B3h4vL6V3rLR6e0Fj8uND_MLJes6oT-EzuG5qyVD855qELsnPdJ2Iq0SbA6A" alt=""> -->
+          
+     </div>
+     <div class="second" id="sec">
+          <h1 class="qwq">
+               About Me
+          </h1>
+          <div class="myself"> 
+               <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem porro, voluptate quod nostrum assumenda vero a illo nemo? Vero nisi quasi dicta adipisci culpa a similique cumque saepe, delectus doloremque rem cupiditate veniam praesentium eius nulla quaerat, iusto recusandae! Voluptatum officiis ex illo aliquam sunt! -->
+               Hi I'am Aryan Mishra currently in 2nd year B.Tech Computer Science and Engineering at Birla Institute and Technology (BIT) Mesra, Ranchi. My hobbies include competitive programming, frontend development, android development, playing sports like badminton and reading novels
+          </div>
+          <img src="https://media.licdn.com/dms/image/D4D03AQE18z9E0FGU4g/profile-displayphoto-shrink_400_400/0/1670593682399?e=1677110400&v=beta&t=-MuwqcrVD8r1EuOW1hqsuAR7T8prl9VWPyAdaFMcACw" alt="" class="ima2">
+          <!-- <img  class="ima2" src="https://media-exp1.licdn.com/dms/image/C5603AQGXCVjPiQ24Kw/profile-displayphoto-shrink_400_400/0/1636544885840?e=1672272000&v=beta&t=AuiceyVJeMsBTePHtr_OOtUKuYMFvcrBUa9_ROzXfAQ" alt="logo"> -->
+     </div>
+
+     <div class="third" id="thd">
+          <h1 class="thd-hd">
+               Skills
+          </h1>
+          <img src="https://ishanpandey703.netlify.app/static/media/cpp.ad112a7c43502452195e4aedb0c5197e.svg" alt="" class="cpp">
+          <img src="https://ishanpandey703.netlify.app/static/media/python.0bbb58972156e017fcbbc137b734bf31.svg" alt="" class="c">
+          <img src="https://ishanpandey703.netlify.app/static/media/bootstrap.e8cd3cce7d734aca4bcb76248792b912.svg" alt="" class="java">
+          <img src="https://ishanpandey703.netlify.app/static/media/js.4fd6a06b84315ddf8bf0f6eb8f7edbfb.svg" alt="" class="js">
+          <img src="https://ishanpandey703.netlify.app/static/media/html.2458958dee0c5f5694ffd1b8f7a09e50.svg" alt="" class="hht">
+          <img src="https://ishanpandey703.netlify.app/static/media/css.fe3ff32055e1e67cb686e64e3a96bdb9.svg" alt="" class="css">
+          <img src="https://ishanpandey703.netlify.app/static/media/nodejs.ee22666d6cc1e1e499fb96578d400da4.svg" alt="" class="cmm">
+          <img src="https://ishanpandey703.netlify.app/static/media/express.4477b91505470856250e938c79f3396f.svg" alt="" class="ex">
+     </div>
+
+     <div class="cfv" id="CFV">
+          <div class="HD">
+               My Projects
+          </div>
+          <!-- <div class="allabt">
+               This is my first project in Web Dev <br><br>
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6sf2mhrbC7rg3GKqlUTlkoPBsWi82JPyu6Q&usqp=CAU" alt=""> <br>
+               <a target="_blank" href="https://github.com/TecvV/Portfolio">Here is the Source Code</a> <br><br>
+               And here is a very basic Android Project <br><br>
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlOm9zAZjgYy-Fc1tIADo-6QTm4f4Jz48zBQ&usqp=CAU" alt="">
+               <br>
+               <a target="_blank" href="https://github.com/TecvV/BMICalculator">Here is the Source Code</a>
+          </div> -->
+          <div class="bmi">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlOm9zAZjgYy-Fc1tIADo-6QTm4f4Jz48zBQ&usqp=CAU" alt="" class="bmiphoto">
+               <h1 class="bmihead">
+                    BMI Calculator
+               </h1>
+               <p class="bmiPara">Get to know everything about your fitness :)</p>
+               <button class="bttnBmi"  id="id1">
+                    <a class="bmiSource" target="_blank" href="https://github.com/TecvV/BMICalculator">Source Code</a>
+               </button>
+          </div>
+          <div class="portf">
+               <img src="data:image/jpeg;base64,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" alt="" class="portfphoto">
+               <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6sf2mhrbC7rg3GKqlUTlkoPBsWi82JPyu6Q&usqp=CAU" alt="" class="portfphoto"> -->
+               <h1 class="portHead">
+                    Portfolio
+               </h1>
+               <p class="portPara">
+                    All about me and myself
+               </p>
+               <button class="bttnPort"  id="id2">
+                    <a class="portSource" target="_blank" href="https://github.com/TecvV/Portfolio">Source Code</a>
+               </button>
+          </div>
+     </div>
+     <div class="contact" id="cc">
+          <h1 class="cnt">
+               Contact Me
+          </h1>
+          <a class="FB" target="_blank" href="https://www.facebook.com/profile.php?id=100004101140149">
+               <img class="fb" src="https://ishanpandey703.github.io/Portfolio/photos/Facebook.png" alt="">
+
+          </a>
+          <a class="INSTA" target="_blank" href="https://www.instagram.com/tecvaryan/">
+               <img src="https://ishanpandey703.github.io/Portfolio/photos/instagram.png" alt="" class="insta">
+
+          </a>
+          <a class="LB" target="_blank" href="https://www.linkedin.com/in/aryan-mishra-52ba21205/">
+               <img src="https://ishanpandey703.github.io/Portfolio/photos/linked_in.png" alt="" class="ld">
+
+          </a>
+          <a class="GITHB" target="_blank" href="https://github.com/TecvV">
+               <img src="https://ishanpandey703.github.io/Portfolio/photos/github_git.png" alt="" class="githb">
+          </a>
+          <button id="bttn" onclick="topf()">
+               Go to Top
+          </button>
+          
+     </div>
+     <script>
+          function topf(){
+               let bttn = document.getElementById('bttn');
+               document.documentElement.scrollTop = 0;
+          }
+          // function Porto(){
+          //      let b1 = document.getElementById('id2');
+          // }
+          // function BMIc(){
+          //      let b2 = document.getElementById('id1');
+          // }
+     </script>
+</body>
+</html>
+
+
+
+<!-- margin-top: 29px;
+height: 594px; -->
+
+
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae reprehenderit dolor recusandae dolores ut unde ratione odio! Sed hic expedita quo sit suscipit similique necessitatibus laudantium quidem deserunt, animi nihil dolorum dolorem modi vitae, nemo distinctio? Quia architecto animi asperiores alias iusto id sed molestiae nostrum magni commodi illo recusandae quaerat ipsam, fuga unde at illum, qui natus assumenda soluta! Aspernatur tempora fugiat dolorem porro architecto ex libero deserunt quaerat aut. Autem nobis delectus voluptate exercitationem tempore, ipsa veniam id fugiat alias possimus repudiandae expedita temporibus amet reprehenderit neque at. Dolor magni sunt quod ex fugiat quaerat a ipsa qui, accusantium possimus consequatur obcaecati quam praesentium neque molestiae tempora, pariatur nihil ut quo. Totam itaque eligendi excepturi consectetur enim error, harum repellendus similique et explicabo, esse officiis rerum ratione ullam ipsum dolorum nemo veniam. Quod placeat nostrum provident dignissimos harum ducimus laboriosam eos quos rerum modi magni, aspernatur voluptatum sapiente et quae ex enim aperiam dicta molestias quis ut atque quibusdam tempora cum? Officiis, porro? Culpa adipisci recusandae voluptates animi assumenda. Pariatur natus assumenda dolorem praesentium aspernatur! Quaerat reiciendis tempora autem incidunt maiores explicabo assumenda necessitatibus earum fugit commodi expedita, officiis voluptatum deleniti mollitia minima itaque similique ut, perspiciatis impedit! Reiciendis numquam, aut velit eaque doloremque vitae eum. Iure dolore, distinctio nemo aliquam doloremque explicabo dolores veritatis temporibus architecto in a beatae illum, ab eveniet! Officiis officia aspernatur ratione dolores? Quos ipsum vel assumenda eius, aut consequatur doloremque nisi voluptate sit deleniti earum ad ea. Blanditiis earum ex quas sequi nostrum totam voluptatum reprehenderit delectus provident corporis libero distinctio autem, voluptates unde quis necessitatibus possimus perferendis ratione beatae voluptatibus. Ut amet dolor, laudantium sapiente non consequatur! Aperiam exercitationem expedita praesentium nobis doloribus vel placeat nam eaque magni fuga dignissimos veniam ratione, officiis nesciunt porro, tempora, voluptatum quod ad. Ipsa, cum. -->
