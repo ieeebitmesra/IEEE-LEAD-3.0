@@ -1,0 +1,94 @@
+.about{
+    padding: 10vh;
+    background-color: #EDEDED;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.hero-pic{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-top: 40px;
+    border-radius: 100%;
+    height: 180px;
+    width: 180px;
+}
+.hero-pic:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.hero-about{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    margin-top: 15vh;
+    height: fit-content;
+}
+.about-me-title{
+    font-size: 5vW;
+    text-align: left;
+    /* color: #fff; */
+}
+.about-card{
+    display: flex;
+    margin-top: 30px;
+    text-align: left;
+    font-weight: 600;
+    font-size:x-large;
+}
+
+.hrule{
+    width: 50vw;
+}
+
+@media screen and (max-width:769px){
+    .about{
+        padding: 20px;
+        background-color: #EDEDED;
+        min-height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .hero-pic{
+        margin-top: 75px;
+        border-radius: 100%;
+        height: 15vh;
+        width: 15vh;
+        align-self: center;
+    }
+    .hero-about{
+        margin-top: 1px;
+        display: flex;
+    }
+    .hero-about h2{
+        padding-top: 15px;
+        font-size: xx-large;
+        /* color: #fff; */
+    }
+    .hrule{
+        width: 50vw;
+    }
+    .about-card{
+        padding-top: 5px;
+        text-align: left;
+        font-weight: 600;
+        font-size: large;
+        display: flex;
+    }
+}
+
+/*dark mode*/
+
+.about-dark{
+    background-color: #222526;
+}
+.about-me-dark{
+    font-size: 5vW;
+    text-align: left;
+    color: #e8e6e2;
+}
+.about-content-dark{
+    color: #e8e6e2;
+}
