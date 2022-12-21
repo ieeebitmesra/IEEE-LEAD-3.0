@@ -1,3 +1,3 @@
 # CinemaReel
 
-This website is deployed and running at: cinemareel.netlify.app
+This website is deoplyed and running @ cinema-reel.netlify.app
